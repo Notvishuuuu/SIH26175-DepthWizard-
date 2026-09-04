@@ -1,0 +1,12 @@
+{
+    "model": "Depth Anything V2 Small",
+    "input_image": "biking in nyc _3.jpg",
+    "image_width": 736,
+    "image_height": 981,
+    "depth_width": 736,
+    "depth_height": 981,
+    "data_type": "float32",
+    "representation": "relative_depth",
+    "min_value": -0.43340417742729187,
+    "max_value": 7.46762752532959
+}
