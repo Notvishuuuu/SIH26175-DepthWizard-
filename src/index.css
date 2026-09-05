@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(ellipse 120% 80% at 50% -10%, #1c0e3d 0%, #0a0714 45%, #050308 100%);
+  color: #e9e4f7;
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(124, 63, 216, 0.4);
+  border-radius: 4px;
+}
+
+.glass-panel {
+  background: linear-gradient(180deg, rgba(24, 16, 45, 0.72), rgba(12, 8, 24, 0.72));
+  border: 1px solid rgba(140, 110, 220, 0.16);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.hairline {
+  border-color: rgba(140, 110, 220, 0.14);
+}
+
+.text-glow {
+  text-shadow: 0 0 24px rgba(157, 99, 240, 0.5);
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+@keyframes drift {
+  from { transform: translateY(0px); }
+  to { transform: translateY(-16px); }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 40s linear infinite;
+}
+
+@keyframes pulse-soft {
+  0%, 100% { opacity: 0.55; }
+  50% { opacity: 1; }
+}
+.animate-pulse-soft {
+  animation: pulse-soft 2.4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+button:focus-visible, [tabindex]:focus-visible, input:focus-visible {
+  outline: 2px solid #8ff2ec;
+  outline-offset: 2px;
+}
